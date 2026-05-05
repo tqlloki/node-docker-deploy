@@ -31,6 +31,7 @@ jobs:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.REMOTE_PORT }}
           script: |
             echo "${{ secrets.ENV_FILE }}" > .env
             docker pull ${{ secrets.DOCKER_USERNAME }}/node-secret-app:latest
